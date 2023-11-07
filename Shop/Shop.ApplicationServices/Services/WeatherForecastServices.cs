@@ -3,10 +3,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Text.Encodings.Web;
 using Nancy.Json;
+using Shop.Core.ServiceInterface;
 
 namespace Shop.ApplicationServices.Services
 {
-    public class WeatherForecastServices
+    public class WeatherForecastServices : IWeatherForecastServices
     {
         public async Task<OpenWeatherResultDto> OpenWeatherResult(OpenWeatherResultDto dto)
         {
