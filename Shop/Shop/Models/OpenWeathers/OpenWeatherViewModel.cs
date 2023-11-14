@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shop.Core.Dto.OpenWeatherDtos
+﻿namespace Shop.Models.OpenWeathers
 {
-    public class OpenWeatherResultDto
+    public class OpenWeatherViewModel
     {
         public string City { get; set; }
         public double Lon { get; set; }
@@ -38,6 +32,5 @@ namespace Shop.Core.Dto.OpenWeatherDtos
         public int TimeZoneId { get; set; }
         public string Name { get; set; }
         public int Cod { get; set; }
-
     }
 }
