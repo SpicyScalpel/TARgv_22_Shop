@@ -1,7 +1,16 @@
-﻿namespace Shop.Models.Kindergarten
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
+
+namespace Shop.Core.Domain
 {
-    public class KindergartenDeleteViewModel
+    public class Kindergarten
     {
+        [Key]
         public Guid? Id { get; set; }
         public string GroupName { get; set; }
         public int ChildrenCount { get; set; }

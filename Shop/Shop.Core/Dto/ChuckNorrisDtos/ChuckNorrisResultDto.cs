@@ -1,6 +1,8 @@
-﻿namespace Shop.Models.ChuckNorrises
+﻿using System.Text.Json.Serialization;
+
+namespace Shop.Core.Dto.ChuckNorrisDtos
 {
-    public class ChuckNorrisViewModel
+    public class ChuckNorrisResultDto
     {
         public string Categories { get; set; }
         public string CreatedAt { get; set; }
