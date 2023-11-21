@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Shop.Core.ServiceInterface
 {
-    public interface ICoctailsServices
+    public interface ICocktailServices
     {
-        Task<CoctailsResultDto> CoctailsResult(CoctailsResultDto dto);
+        Task<CocktailResultDto> GetCocktails(CocktailResultDto dto);
     }
 }
