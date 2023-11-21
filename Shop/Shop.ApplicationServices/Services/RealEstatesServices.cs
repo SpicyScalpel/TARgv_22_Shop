@@ -3,7 +3,6 @@ using Shop.Core.Domain;
 using Shop.Core.Dto;
 using Shop.Core.ServiceInterface;
 using Shop.Data;
-using Shop.Data.Migrations;
 
 
 namespace Shop.ApplicationServices.Services

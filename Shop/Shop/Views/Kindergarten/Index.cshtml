@@ -29,7 +29,7 @@
             @foreach (var kindergarten in Model)
             {
                 <tr>
-                    <td>@rowNumber</td>
+                    <td>@(rowNumber++)</td>
                     <td>@kindergarten.GroupName</td>
                     <td>@kindergarten.ChildrenCount</td>
                     <td>@kindergarten.KindergartenName</td>
@@ -40,10 +40,7 @@
                         <a asp-action="delete" asp-controller="kindergarten" asp-route-id="@kindergarten.Id" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
-
-                rowNumber += 1;
             }
-
         </tbody>
     </table>
 </form>
