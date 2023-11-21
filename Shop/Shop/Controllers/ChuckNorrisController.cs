@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Core.Dto.ChuckNorrisDtos;
 using Shop.Core.ServiceInterface;
-using Shop.Models.ChuckNorrises;
+using Shop.Models.ChuckNorris;
 
 namespace Shop.Controllers
 {
@@ -14,6 +14,7 @@ namespace Shop.Controllers
             _chuckNorrisServices = chuckNorrisServices;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -22,12 +23,7 @@ namespace Shop.Controllers
         [HttpPost]
         public IActionResult SearchChuckNorrisJokes(ChuckNorrisViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Joke", "ChuckNorris");
-            }
-
-            return View(model);
+            return RedirectToAction("Joke", "ChuckNorris");
         }
 
         [HttpGet]

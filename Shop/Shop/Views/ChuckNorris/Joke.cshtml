@@ -34,5 +34,11 @@
             <label asp-for="Value" class="col-sm-2 col-form-label"></label>
             @Html.DisplayFor(model => model.Value)
         </div>
+
+        <form method="post">
+            <div class="form-group col-md-offset-3 col-md-5">
+                <button asp-controller="ChuckNorris" asp-action="SearchChuckNorrisJokes" class="btn btn-primary">Chuck Norris joke</button>
+            </div>
+        </form>
     </dl>
 </div>
