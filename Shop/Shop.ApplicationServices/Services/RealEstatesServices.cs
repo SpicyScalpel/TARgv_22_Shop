@@ -80,7 +80,9 @@ namespace Shop.ApplicationServices.Services
             var realEstateId = await _context.RealEstates
                 .FirstOrDefaultAsync(x => x.Id == id);
 
+            await _fileServices.RemoveImagesFromDatabase(id);
             _context.RealEstates.Remove(realEstateId);
+
             await _context.SaveChangesAsync();
 
             return realEstateId;

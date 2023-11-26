@@ -4,7 +4,7 @@ using Shop.Core.Domain;
 using Shop.Core.Dto;
 using Shop.Core.ServiceInterface;
 using Shop.Data;
-
+using System.Runtime.CompilerServices;
 
 namespace Shop.ApplicationServices.Services
 {
@@ -131,6 +131,18 @@ namespace Shop.ApplicationServices.Services
             await _context.SaveChangesAsync();
 
             return image;
+        }
+
+        public async Task<FileToDatabase> RemoveImagesFromDatabase(Guid id)
+        {
+            var images = await _context.FileToDatabases
+                .Where(x=> x.RealEstateId == id)
+                .ToArrayAsync();
+
+            _context.FileToDatabases.RemoveRange(images);
+            await _context.SaveChangesAsync();
+
+            return null;
         }
     }
 }

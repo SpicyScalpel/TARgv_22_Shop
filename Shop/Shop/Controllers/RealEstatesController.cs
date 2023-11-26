@@ -260,5 +260,20 @@ namespace Shop.Controllers
         }
 
         // teha meetod, mis kustutab mitu pilti korraga ära
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveImages(ImageToDatabaseViewModel[] files)
+        {
+            foreach (var file in files)
+            {
+                var dto = new FileToDatabaseDto()
+                {
+                    Id = file.ImageId
+                };
+
+                var image = await _fileServices.RemoveImageFromDatabase(dto);
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
