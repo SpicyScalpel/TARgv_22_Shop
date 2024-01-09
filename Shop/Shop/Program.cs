@@ -5,6 +5,7 @@ using Shop.ApplicationServices.Services;
 using Shop.Core.Domain;
 using Shop.Core.ServiceInterface;
 using Shop.Data;
+using Shop.Security;
 using SignalRChat.Hubs;
 
 
@@ -24,6 +25,8 @@ builder.Services.AddScoped<IKindergartenServices, KindergartenServices>();
 builder.Services.AddScoped<IWeatherForecastServices, WeatherForecastServices>();
 builder.Services.AddScoped<IChuckNorrisServices, ChuckNorrisServices>();
 builder.Services.AddScoped<ICocktailServices, CocktailServices>();
+builder.Services.AddScoped<IAccuWeatherServices, AccuWeatherServices>();
+
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
