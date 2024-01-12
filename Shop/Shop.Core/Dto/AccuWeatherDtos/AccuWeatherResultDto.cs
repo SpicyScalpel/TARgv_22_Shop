@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Core.Dto.AccuWeatherDtos
 {
-    public class AccuWeatherDto
+    public class AccuWeatherResultDto
     {
         public string City { get; set; }
 

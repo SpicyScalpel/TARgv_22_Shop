@@ -34,7 +34,7 @@ namespace Shop.Controllers
 
         public IActionResult AccuWeathers(string city)
         {
-            AccuWeatherDto dto = new AccuWeatherDto();
+            AccuWeatherResultDto dto = new AccuWeatherResultDto();
             dto.City = city;
 
             _accuweatherServices.AccuWeatherResult(dto);

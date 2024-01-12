@@ -4,6 +4,6 @@ namespace Shop.Core.ServiceInterface
 {
     public interface IAccuWeatherServices
     {
-        public Task<AccuWeatherDto> AccuWeatherResult(AccuWeatherDto dto);
+        public Task<AccuWeatherResultDto> AccuWeatherResult(AccuWeatherResultDto dto);
     }
 }

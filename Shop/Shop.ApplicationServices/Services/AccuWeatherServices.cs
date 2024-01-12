@@ -15,7 +15,7 @@ namespace Shop.ApplicationServices.Services
 
         string number = "";
         string idAccuweather = "";
-        public async Task<AccuWeatherDto> AccuWeatherResult(AccuWeatherDto dto)
+        public async Task<AccuWeatherResultDto> AccuWeatherResult(AccuWeatherResultDto dto)
         {
             string url = $"http://dataservice.accuweather.com/locations/v1/cities/search?apikey={idAccuweather}&q={dto.City}";
 
