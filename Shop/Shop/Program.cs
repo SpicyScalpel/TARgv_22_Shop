@@ -51,8 +51,8 @@ builder.Services.Configure<CustomEmailConfirmationTokenProviderOptions>(o => o.T
 builder.Services.AddAuthentication()
     .AddGoogle(options =>
     {
-        options.ClientId = "";
-        options.ClientSecret = "";
+        options.ClientId = "803804206968-memekc0k8gqaguivjav6gguf5atpl2oq.apps.googleusercontent.com";
+        options.ClientSecret = "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";
     });
 
 var app = builder.Build();
